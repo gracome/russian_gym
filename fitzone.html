@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russian Gym Center - Votre Centre de Fitness Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .membership-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .animate-bounce-slow {
+            animation: bounce 3s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="./logo.jpeg" alt="" class="w-10 h-10 rounded-full">
+                <span class="text-xl font-bold">Russian Gym Center</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-green-500 transition">Accueil</a>
+                <a href="#services" class="hover:text-green-500 transition">Services</a>
+                <a href="#coaches" class="hover:text-green-500 transition">Coachs</a>
+                <a href="#pricing" class="hover:text-green-500 transition">Tarifs</a>
+                <a href="#contact" class="hover:text-green-500 transition">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <!-- <div class="hidden md:block">
+                <button class="bg-green-600 hover:bg-green-700 px-6 py-2 rounded-full font-medium transition">Essai Gratuit</button>
+            </div> -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Transformez votre corps, <span class="text-green-500">Boostez votre vie</span></h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">Rejoignez notre communauté de fitness et atteignez vos objectifs avec nos programmes personnalisés et nos coachs experts.</p>
+            <!-- <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full font-bold text-lg transition">Commencer Maintenant</button>
+                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition">En savoir plus</button>
+            </div> -->
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Pourquoi choisir <span class="text-green-500">Russian Gym Center</span> ?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center p-6 rounded-lg">
+                    <div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-heartbeat text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Équipement Premium</h3>
+                    <p class="text-gray-600">Matériel de dernière génération pour des entraînements optimaux et sécurisés.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg">
+                    <div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Coachs Certifiés</h3>
+                    <p class="text-gray-600">Nos professionnels vous accompagnent pour des résultats rapides et durables.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg">
+                    <div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-alt text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Programmes Flexibles</h3>
+                    <p class="text-gray-600">Adaptés à tous les niveaux et à vos disponibilités, même les plus chargées.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Nos <span class="text-green-500">Services</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c955d15db844?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Musculation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Musculation</h3>
+                        <p class="text-gray-600 mb-4">Des équipements haut de gamme pour développer votre force et votre masse musculaire.</p>
+                        <button class="text-green-500 font-medium hover:underline">En savoir plus</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cardio" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Cardio Training</h3>
+                        <p class="text-gray-600 mb-4">Améliorez votre endurance et brûlez des calories avec nos machines cardio dernier cri.</p>
+                        <button class="text-green-500 font-medium hover:underline">En savoir plus</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Yoga" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Cours Collectifs</h3>
+                        <p class="text-gray-600 mb-4">Yoga, HIIT, Zumba et plus encore dans une ambiance énergisante et motivante.</p>
+                        <button class="text-green-500 font-medium hover:underline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section id="coaches" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Rencontrez nos <span class="text-green-500">Coachs</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-green-500 mb-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Coach 1" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">Marc Dupont</h3>
+                    <p class="text-green-500 mb-2">Spécialiste en musculation</p>
+                    <p class="text-gray-600">15 ans d'expérience dans le coaching personnel</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-green-500 mb-4">
+                        <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Coach 2" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">Sophie Martin</h3>
+                    <p class="text-green-500 mb-2">Experte en fitness</p>
+                    <p class="text-gray-600">Ancienne athlète professionnelle</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-green-500 mb-4">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Coach 3" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">Thomas Leroy</h3>
+                    <p class="text-green-500 mb-2">Coach CrossFit</p>
+                    <p class="text-gray-600">Certifié niveau 3 avec spécialisation en nutrition</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-green-500 mb-4">
+                        <img src="https://images.unsplash.com/photo-1533681472164-5a6976b9a85e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Coach 4" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">Laura Petit</h3>
+                    <p class="text-green-500 mb-2">Professeure de Yoga</p>
+                    <p class="text-gray-600">Formée en Inde, spécialiste des techniques de respiration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Nos <span class="text-green-500">Formules</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center membership-card transition duration-300">
+                    <h3 class="text-xl font-bold mb-4">Basique</h3>
+                    <div class="text-4xl font-bold mb-6">5000 Fcfa<span class="text-lg text-gray-500">/mois</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Accès salle de musculation</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Accès 2 fois/semaine a la salle</li>
+                        <li><i class="fas fa-check text-red-500 mr-2"></i> Coaching personnel</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i> Programme nutritionnel</li>
+                    </ul>
+                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-full font-medium transition">Choisir</button>
+                </div>
+                <div class="bg-green-600 text-white rounded-xl shadow-lg p-8 text-center membership-card transform scale-105 transition duration-300">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-gray-900 px-4 py-1 rounded-bl-lg font-bold">Populaire</div>
+                    <h3 class="text-xl font-bold mb-4">Premium</h3>
+                    <div class="text-4xl font-bold mb-6">10000 Fcfa<span class="text-lg text-green-200">/mois</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li><i class="fas fa-check text-yellow-300 mr-2"></i> Accès illimité à tous les équipements</li>
+                        <li><i class="fas fa-check text-yellow-300 mr-2"></i> Accès illimité aux cours collectifs</li>
+                        <li><i class="fas fa-check text-yellow-300 mr-2"></i> 1 séance de coaching/mois</li>
+                        <li><i class="fas fa-check text-yellow-300 mr-2"></i> Programme nutritionnel de base</li>
+                    </ul>
+                    <button class="w-full bg-white hover:bg-gray-100 text-green-600 py-3 rounded-full font-medium transition">Choisir</button>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center membership-card transition duration-300">
+                    <h3 class="text-xl font-bold mb-4">VIP</h3>
+                    <div class="text-4xl font-bold mb-6">15000 Fcfa<span class="text-lg text-gray-500">/mois</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Accès illimité 24/7</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Coaching personnel hebdomadaire</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Programme nutritionnel personnalisé</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Accès spa et sauna</li>
+                    </ul>
+                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-full font-medium transition">Choisir</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Témoignages de nos <span class="text-green-500">Membres</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-8 rounded-xl testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client 1" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Julie D.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"J'ai perdu 15kg en 6 mois grâce au programme personnalisé de Russian Gym Center. Les coachs sont toujours disponibles et motivants!"</p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-xl testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client 2" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Pierre L.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"L'ambiance est géniale et les équipements sont toujours en parfait état. Je recommande à 100%!"</p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-xl testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client 3" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah M.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Les cours de yoga avec Laura ont changé ma vie. Je me sens plus souple et détendue après seulement 2 mois."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-green-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à transformer votre vie ?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Rejoignez-nous dès aujourd'hui et bénéficiez de 7 jours d'essai gratuit sans engagement!</p>
+            <button class="bg-white hover:bg-gray-100 text-green-600 px-10 py-4 rounded-full font-bold text-lg transition">Essai Gratuit</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Nous <span class="text-green-500">Contacter</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Informations</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-green-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Adresse</h4>
+                                <p class="text-gray-600">F9M2+F37, Abomey Calavi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-green-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Téléphone</h4>
+                                <p class="text-gray-600">01 66 30 24 62</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-green-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-gray-600">contact@fitzone.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-green-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Horaires</h4>
+                                <p class="text-gray-600">Lundi-Dimanche: 7h-22h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Suivez-nous</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Envoyez-nous un message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Votre nom" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Votre email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Sujet" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <textarea placeholder="Votre message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.8752364273146!2d2.3501875!3d6.4836875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a940987f1b39%3A0xc5d2b9bb80bab261!2sRUSSIAN%20GYM%20Center!5e0!3m2!1sfr!2s!4v1714753348215"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+        </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="./logo.jpeg" alt="" class="w-10 h-10 rounded-full">
+                      
+                        <span class="text-xl font-bold">Russian Gym Center</span>
+                    </div>
+                    <p class="text-gray-400">Votre centre de fitness premium à Paris. Nous nous engageons à vous aider à atteindre vos objectifs de santé et de bien-être.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#coaches" class="text-gray-400 hover:text-white transition">Coachs</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition">Tarifs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Musculation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cardio Training</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cours Collectifs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Coaching Personnel</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Nutrition</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Abonnez-vous pour recevoir nos offres spéciales et conseils fitness.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 bg-gray-800 text-white rounded-l-lg focus:outline-none w-full">
+                        <button class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-r-lg"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 Russian Gym Center. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for mobile menu toggle (would need to be expanded for full functionality)
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            // This would toggle a mobile menu in a real implementation
+            alert('Menu mobile à implémenter');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
